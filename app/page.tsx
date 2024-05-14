@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Home() {
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     //   {
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-      <img
-        src="/img/beams.jpg"
-        alt=""
-        className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
-        width="1308"
-      />
       <div className="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       <div className="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
         <div className="mx-auto max-w-md">
@@ -25,8 +20,8 @@ export default function Home() {
                 <li className="flex items-center">
                   <svg
                     className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <circle cx="12" cy="12" r="11" />
                     <path
@@ -45,8 +40,8 @@ export default function Home() {
                 <li className="flex items-center">
                   <svg
                     className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <circle cx="12" cy="12" r="11" />
                     <path
@@ -64,8 +59,8 @@ export default function Home() {
                 <li className="flex items-center">
                   <svg
                     className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <circle cx="12" cy="12" r="11" />
                     <path
@@ -80,9 +75,15 @@ export default function Home() {
                 Perfect for learning how the framework works, prototyping a new
                 idea, or creating a demo to share online.
               </p>
-              <Button className="bg-purple-700 hover:bg-purple-800">
-                Button
-              </Button>
+              <div className="flex">
+                <ModeToggle></ModeToggle>
+                <Button
+                  size={"default"}
+                  className="ml-3 bg-purple-700 hover:bg-purple-800"
+                >
+                  MODE
+                </Button>
+              </div>
             </div>
             <div className="pt-8 text-base font-semibold leading-7">
               <p className="text-gray-900">Want to dig deeper into Tailwind?</p>
